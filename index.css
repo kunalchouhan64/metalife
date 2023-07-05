@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btnhover {
+  transition: all 0.3s linear;
+}
+
+.btnhover:hover {
+  background-color: #ff1ce5;
+  border: 2px solid white;
+  color: black;
+}
+
+.active {
+  border: 2.5px solid #9b09d1;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  box-shadow: #DE87FE 0px 2px 2px;
+}
+
+.activebtn {
+  border: 2.5px solid #9b09d1;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  box-shadow: #DE87FE 0px 2px 8px;
+}
+
+.imgshadow {
+  box-shadow: #DE87FE 0px 2px 8px;
+}
+
+.multichainimg {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.bounceanimation {
+  animation-name: bounce;
+  animation-timing-function: linear;
+  transition: all 0.3s linear;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ownerimg {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.owneranimation {
+  animation-name: bounce2;
+  animation-timing-function: linear;
+  transition: all 0.3s linear;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-13px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* .overlay {
+  color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.612);
+} */
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f16800, 0 0 10px #3ffe00, 0 0 20px #880056, 0 0 20px #480088, 0 0 50px #68001e, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #ffffff, 0 0 20px #ff4da6, 0 0 20px #056298, 0 0 20px #6800c3, 0 0 60px #000590, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* Navbar  */
+
+@media (max-width: 767px) {
+  .navicon {
+    width: 1.125em;
+    height: .125em;
+  }
+
+  .navicon::before,
+  .navicon::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-out;
+    content: '';
+    background: #ab00df;
+  }
+
+  .navicon::before {
+    top: 5px;
+  }
+
+  .navicon::after {
+    top: -5px;
+  }
+
+  .menu-btn:not(:checked)~.menu {
+    display: none;
+  }
+
+  .menu-btn:checked~.menu {
+    display: block;
+  }
+
+  .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked~.menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked~.menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked~.menu-icon .navicon::before,
+  .menu-btn:checked~.menu-icon .navicon::after {
+    top: 0;
+  }
+}
+
+.transitionclass {
+  transition: all 0.5s linear;
+}
+
+#transid1 {
+  transition: all 0.5s linear;
+}
+
+#transid2 {
+  transition: all 0.5s linear;
+}
+
+#transid3 {
+  transition: all 0.5s linear;
+}
+
+.sociprev_img1 {
+  background-image: url('/Images/Social_Img/social_prev_Img_1.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img2 {
+  background-image: url('/Images/Social_Img/events_img.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img3 {
+  background-image: url('/Images/Social_Img/cruise_img.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img4 {
+  background-image: url('/Images/Social_Img/sports_club.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img5 {
+  background-image: url('/Images/Social_Img/gym_img.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img6 {
+  background-image: url('/Images/Social_Img/hindu_temple.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img7 {
+  background-image: url('/Images/Social_Img/music_concerts.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img8 {
+  background-image: url('/Images/Social_Img/restoraunts_img.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sociprev_img9 {
+  background-image: url('/Images/Social_Img/park_img.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.inner_bg {
+  background-image: url('/Images/inner_bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.avatar_bg {
+  background-image: url('/Images/avatar_bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .inner_bg {
+    background-image: url('/Images/inner_bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+  }
+
+  .mobileimg {
+    background-image: url('/Images/mobile_bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+@media only screen and (min-width: 501px) and (max-width: 749px) {
+  .inner_bg {
+    background-image: url('/Images/inner_bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+  }
+
+  .mobileimg {
+    background-image: url('/Images/mobile_bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
